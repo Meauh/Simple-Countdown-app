@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mylayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/green_700">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+    <TextView
+        android:id="@+id/text_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00"
+        android:textSize="130sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/text_countdown_milis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00.0"
+        android:textSize="60sp"
+        android:alpha="0.8"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/text_countdown"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_countdown_milis"
+        android:layout_centerHorizontal="true"
+        android:text="Start" />
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_start_pause"
+        android:layout_centerHorizontal="true"
+        android:text="Reset"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+        <Button
+            android:id="@+id/button_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_reset"
+            android:layout_centerHorizontal="true"
+            android:text="Edit"
+            tools:visibility="visible"/>
+    </RelativeLayout>
+
+</RelativeLayout>
